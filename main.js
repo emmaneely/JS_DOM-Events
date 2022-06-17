@@ -59,12 +59,19 @@ let list = [ "apples", "bananas", "carrots", "dragon fruit", "eggplant", "fish",
 
 
 // TODO: Create an unordered list element
+let ul = document.createElement("ul");
 
 // TODO: Iterate over the array values, and create a list item element for each
-
-// TODO: Append the new list items to the unordered list element
+for (let item of list) {
+    // TODO: Append the new list items to the unordered list element
+    let li = document.createElement("li");
+    li.textContent = item;
+    ul.appendChild(li);
+}
 
 // TODO: Append the unordered list to the `div#container` under exercise 4 
+let containerId = document.querySelector("#container");
+containerId.appendChild(ul);
 
 /*----------- Exercise #5: DOM EVENTS --------------*/
 
