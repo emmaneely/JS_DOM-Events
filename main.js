@@ -43,8 +43,14 @@ parentId.insertBefore(link, newP);
 /*----------- Exercise #3: REMOVING/REPLACING ELEMENTS/OBJECTS -----------*/
 
 // TODO: Replace the "Child Node" with a new <p> element that reads "New Child Node"
+let child = document.createElement("p");
+child.textContent = 'New Child Node';
+
+let exercise3 = document.querySelector("#exercise-container3");
+let replaceChild = document.querySelector("#N1");
 
 // TODO: Remove the "New Child Node"
+exercise3.replaceChild(child, replaceChild);
 
 /*----------- Exercise #4: ANIMATIONS ----------- */
 // Use the following array of values to generate a list on the DOM
