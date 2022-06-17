@@ -79,3 +79,25 @@ containerId.appendChild(ul);
 // -> "Clicking the button triggers the onclick event, which calls the JS function show()... which alerts the user"
 // This div should be a 'modal' that covers the main content on the screen
 // BONUS: The modal popup should be able to be closed. Refactor for this functionality
+
+function show(event) {
+    let modalContainer = document.createElement("div");
+    let modalBody = document.createElement("div");
+    let title = document.createElement("h2");
+    let content = document.createElement("p");
+    let closeButton = document.createElement("button");
+
+    title.textContent = 'Action Required';
+    content.textContent = 'You need to...';
+    closeButton.textContent = 'Close';
+
+    modalContainer.id = "modal";
+    modalBody.classList.add("modal-card");
+
+    modalBody.append(title, content, closeButton);
+    modalContainer.appendChild(modalBody);
+    document.body.appendChild(modalContainer);
+}
+
+let btn = document.querySelector("#btn");
+btn.addEventListener("click", show);
