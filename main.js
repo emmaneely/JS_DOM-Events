@@ -23,13 +23,22 @@ for (let h3 of allH3s) {
 
 // TODO: Create a paragraph element using this document.createElement() and put this text inside "This node was created using the createElement() method"
 
+let newP = document.createElement("p");
+newP.textContent = 'This node was created using the createElement() method';
+
 // TODO: Append the created node to the parent node using the element.appendChild() method
 
-// TODO: Create a <a> element using this document.createElement() and put this text inside "I am a <a> tag"
+let parentId = document.querySelector("#parent");
+parentId.appendChild(newP);
 
+// TODO: Create a <a> element using this document.createElement() and put this text inside "I am a <a> tag"
 // BONUS: Add a link href to the <a>
+let link = document.createElement("a");
+link.textContent = "TrueCoders"
+link.href = "https://truecoders.io/";
 
 // TODO: Insert the created <a> in the parent but before the <p> you just created using the element.insertBefore() method
+parentId.insertBefore(link, newP);
 
 /*----------- Exercise #3: REMOVING/REPLACING ELEMENTS/OBJECTS -----------*/
 
